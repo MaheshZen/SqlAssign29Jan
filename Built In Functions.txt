@@ -1,0 +1,124 @@
+Built In Functions
+Mathematical Functions:
+1.ABS (): Returns the absolute, positive value of the given numeric expression.
+Ex:select ABS(-15)---- 15
+   select ABS(45)----- 45
+2.CEILING (): Returns the smallest integer greater than, or equal to, the given
+numeric expression.
+Ex:select ceiling(15.000)----15
+   select ceiling(15.0001)----16
+3.FLOOR (): Returns the largest integer less than or equal to the given numeric
+expression.
+Ex:select floor(15.0001)----15
+   select floor(-12.34)----(-13)
+4.SQUARE (): Returns the square of the given expression.
+Ex: select SQUARE(5)---25
+5.SQRT (): Returns the square root of the given expression.
+Ex: select SQUARE(25)---5
+6.POWER (n, m): Returns the power value of given expression
+Ex: select POWER (2, 3) ---------- 8
+7.SIGN (): Returns the positive (+1), zero (0), or negative (-1) sign of the given
+expression.
+Ex: select SIGN(42)------------1
+select SIGN(0)-------------0
+select SIGN(-42)-----------(-1)
+8.LOG (): Returns the natural logarithm of the given expression.
+Ex: select LOG(2)------ 0.693147180559945
+9.LOG 10(): Returns the base-10 logarithm of the given expression.
+Ex: select LOG10(10)----1
+10.SIN (): Returns the trigonometric sine of the given angle (in radians) in an
+approximate numeric expression.
+Ex: select SIN (0) -------0
+11.COS (): A mathematic function that returns the trigonometric cosine of the given
+angle (in radians) in the given expression.
+Ex: select COS (0) -------1
+12.TAN (): Returns the tangent of the input expression.
+Ex: select TAN (0) ---------0
+String Functions:
+----------------
+These functions perform an operation on a string input value
+and return a string or numeric value.
+1.ASCII (): Returns the ASCII code value of the leftmost character of a character
+expression.
+Ex: Select ASCII ('Z') -----90
+2.CHAR (): A string function that converts an int ASCII code to a character.
+Ex: Select CHAR (90) -----Z
+3.CHARINDEX (): Returns the starting position of the specified expression in a
+character string.
+Ex: Select CHARINDEX ('S','SUDHAKAR') -------1
+4.LEFT (): Returns the left part of a character string with the specified number of
+characters.
+Ex: Select LEFT ('SUDHAKAR', 5) ----SUDHA
+5.RIGHT (): Returns the right part of a character string with the specified number of
+characters.
+Ex: Select RIGHT ('SUDHAKAR', 3) ------KAR
+6.LEN (): Returns the number of characters, rather than the number of bytes, of the
+given string expression.
+Ex: Select LEN ('WELCOME') ------------7
+7.LOWER (): Returns a character expression after converting uppercase character
+data to lowercase.
+Ex: Select LOWER ('SAI') --------sai
+8.UPPER (): Returns a character expression with lowercase character data converted
+to uppercase.
+Ex: Select UPPER ('sai') ------SAI
+9.LTRIM (): Returns a character expression after removing leading blanks.
+Ex: Select LTRIM (' HELLO') --------HELLO
+10.RTRIM (): Returns a character string after truncating all trailing blanks.
+Ex: Select RTRIM ('HELLO ') -------HELLO
+11.REPLACE (): Replaces all occurrences of the second given string expression in
+the first string expression with a third expression.
+Ex: Select REPLACE ('JACK AND JUE', 'J', 'BL') ------BLACK AND BLUE
+12.REPLICATE (): Repeats a character expression for a specified number of times.
+Ex: Select REPLICATE ('SAI', 3) -------SAISAISAI
+13.REVERSE (): Returns the reverse of a character expression.
+Ex: Select REVERSE ('HELLO') --------OLLEH
+14.SPACE (): Returns a string of repeated spaces.
+Ex: Select ('SAI'+SPACE (50) +'SUDHAKAR') -----SAI SUDHAKAR
+15.SUBSTRING (expression, start, length): Returns a part of a string from
+expression from starting position, where length is no. of chars to be picked.
+Ex: Select SUBSTRING ('HELLO', 1, 3) ----------- HEL
+Select SUBSTRING ('HELLO', 3, 3) ----------- LLO
+Date and Time Functions:
+-------------------------
+These functions perform an operation on a
+date and time input value and return a string, numeric, or date and time value.
+1.GETDATE (): Returns the current system date and time in the SQL Server
+standard internal format for date time values.
+Ex: Select GETDATE () ------- 2014-02-15 15:35:22.670
+2.DAY (): Returns an integer representing the day date part of the specified date.
+Ex: Select DAY (get date ())
+3.MONTH (): Returns an integer that represents the month part of a specified date.
+Ex: Select MONTH (get date ())
+4.YEAR (): Returns an integer that represents the year part of a specified date.
+Ex: Select YEAR (get Date ())
+5.GETUTCDATE (): Returns the date time value representing the current UTC
+time (Coordinated Universal Time).
+Ex: Select GETUTCDATE ();
+6.DATE NAME (): Returns a character string representing the specified date part of
+the specified date.
+Ex: Select DATE NAME (DW, get date ())
+7.DATE PART (): Returns an integer representing the specified date part of the
+specified date.
+Ex: Select DATEPART (DD, get date ())
+8.DATE ADD (): Returns a new date time value based on adding an interval to the
+specified date.
+Ex: Select DATEADD (DD, 5, get date ())
+9.DATE DIFF (): Returns the difference between the start and end dates in the give
+date part format.
+Ex: Select DATEDIFF (MM, '2012-12-15', get date ())
+Conversion Functions: 
+---------------------
+These functions are used to convert one data type
+to another. We have two conversion functions are CAST and CONVERT both
+provide similar functionality.
+1.CAST (): Convert to one data type to another type.
+Syntax: CAST (Expression as data type [size])
+Ex: Select CAST (10.2587 as Int) -------------10
+2.CONVERT (): Convert function can be used to display date time data in different
+format.
+Syntax: Convert (Data type [size], Expression, Style value)
+Ex: Select Convert (Varchar (24), getdate (),0)
+
+COALESCE():
+The COALESCE() function returns the first non-null value in a list.
+EX:SELECT COALESCE(NULL, 1, 2, 'W3Schools.com');-----W3Schools.com
